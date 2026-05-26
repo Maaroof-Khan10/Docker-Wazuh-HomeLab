@@ -1,2 +1,2 @@
 # Docker-Wazuh-HomeLab
-This repository contains the files needed for the setup of a docker based wazuh home lab.
+You can download the `docker-compose.yml` file and either directly replace it with the one in `wazuh-docker/single-nide` or compare your configuration with it as a reference point.
