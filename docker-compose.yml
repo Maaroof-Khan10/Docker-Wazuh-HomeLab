@@ -105,33 +105,33 @@ services:
       lab-net:
           ipv4_address: 10.0.0.4
 
-kali:
-    image: kalilinux/kali-rolling
-    container_name: attackBox
-    cap_add:
-      - NET_ADMIN
-      - NET_RAW
-      - SYS_NICE
-    tty: true
-    stdin_open: true
-    networks:
-      lab-net:
-        ipv4_address: 10.0.0.5
+  kali:
+      image: kalilinux/kali-rolling
+      container_name: attackBox
+      cap_add:
+        - NET_ADMIN
+        - NET_RAW
+        - SYS_NICE
+      tty: true
+      stdin_open: true
+      networks:
+        lab-net:
+          ipv4_address: 10.0.0.5
 
-ubuntu:
-    image: ubuntu:22.04
-    container_name: victimBox
-    cap_add:
-      - NET_ADMIN
-      - NET_RAW
-      - SYS_NICE
-    tty: true
-    stdin_open: true
-    networks:
-      lab-net:
-        ipv4_address: 10.0.0.6
-    ports:
-      - 5050:80
+  ubuntu:
+      image: ubuntu:22.04
+      container_name: victimBox
+      cap_add:
+        - NET_ADMIN
+        - NET_RAW
+        - SYS_NICE
+      tty: true
+      stdin_open: true
+      networks:
+        lab-net:
+          ipv4_address: 10.0.0.6
+      ports:
+        - 5050:80
 
 volumes:
   wazuh_api_configuration:
